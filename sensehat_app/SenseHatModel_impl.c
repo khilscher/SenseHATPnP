@@ -55,7 +55,7 @@ double Sensehat_Telemetry_ReadTemperature()
     char value[20];
     double rtn_value;
 
-    fp = popen("/usr/bin/python3 /home/pi/get_temperature.py", "r");
+    fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_temperature.py", "r");
 
     if (fp == NULL) {
         printf("Failed to run command\n" );
@@ -81,7 +81,7 @@ double Sensehat_Telemetry_ReadHumidity()
     char value[20];
     double rtn_value;
 
-    fp = popen("/usr/bin/python3 /home/pi/get_humidity.py", "r");
+    fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_humidity.py", "r");
 
     if (fp == NULL) {
         printf("Failed to run command\n" );
@@ -107,7 +107,7 @@ double Sensehat_Telemetry_ReadPressure()
     char value[20];
     double rtn_value;
 
-    fp = popen("/usr/bin/python3 /home/pi/get_pressure.py", "r");
+    fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_pressure.py", "r");
 
     if (fp == NULL) {
         printf("Failed to run command\n" );
@@ -133,7 +133,7 @@ DIGITALTWIN_COMMAND_RESULT Sensehat_Command_Show_message(char* message, unsigned
     char path[1035];
     char cmd[50];
 
-    strcpy(cmd, "/usr/bin/python3 /home/pi/show_message.py ");
+    strcpy(cmd, "/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/show_message.py ");
 
     strcat(cmd, message);
 
