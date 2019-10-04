@@ -1,0 +1,16 @@
+{
+  "@id": "urn:sense_hat:SenseHatModel:1",
+  "@type": "CapabilityModel",
+  "displayName": "Sense Hat Capability Model",
+  "implements": [
+    {
+        "schema": "urn:sense_hat:SenseHat:1",
+        "name": "sensehat"
+    },
+    {
+        "schema": "urn:azureiot:DeviceManagement:DeviceInformation:1",
+        "name": "deviceInfo"
+    }
+  ],
+  "@context": "http://azureiot.com/v1/contexts/IoTModel.json"
+}

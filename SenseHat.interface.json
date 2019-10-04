@@ -1,0 +1,39 @@
+{
+  "@id": "urn:sense_hat:SenseHat:1",
+  "@type": "Interface",
+  "displayName": "Sense Hat Interface",
+  "contents": [
+    {
+        "@type": "Telemetry",
+        "comment": "Sense Hat Temperature",
+        "name": "temperature",
+        "schema": "double",
+        "unit": "Units/Temperature/celsius"
+    },
+    {
+        "@type": "Telemetry",
+        "comment": "Sense Hat Relative Humidity",
+        "name": "humidity",
+        "schema": "double",
+        "unit": "Units/Humidity/percent"
+    },
+    {
+        "@type": "Telemetry",
+        "comment": "Sense Hat Pressure",
+        "name": "pressure",
+        "schema": "double",
+        "unit": "Units/Pressure/kiloPascal"
+    },
+    {
+        "@type": "Command",
+        "description": "This command will display a message on the Sense Hat LED display.",
+        "name": "show_message",
+        "commandType": "synchronous",
+        "request": {
+          "name": "message",
+          "schema": "string"
+        }
+      }
+  ],
+  "@context": "http://azureiot.com/v1/contexts/IoTModel.json"
+}
