@@ -58,7 +58,7 @@ double Sensehat_Telemetry_ReadTemperature()
     fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_temperature.py", "r");
 
     if (fp == NULL) {
-        printf("Failed to run command\n" );
+        LogInfo("Failed to run command\n" );
         exit(1);
     }
 
@@ -84,7 +84,7 @@ double Sensehat_Telemetry_ReadHumidity()
     fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_humidity.py", "r");
 
     if (fp == NULL) {
-        printf("Failed to run command\n" );
+        LogInfo("Failed to run command\n" );
         exit(1);
     }
 
@@ -110,7 +110,7 @@ double Sensehat_Telemetry_ReadPressure()
     fp = popen("/usr/bin/python3 /home/pi/SenseHATPnP/python_scripts/get_pressure.py", "r");
 
     if (fp == NULL) {
-        printf("Failed to run command\n" );
+        LogInfo("Failed to run command\n" );
         exit(1);
     }
 
@@ -140,7 +140,7 @@ DIGITALTWIN_COMMAND_RESULT Sensehat_Command_Show_message(char* message, unsigned
     fp = popen(cmd, "r");
 
     if (fp == NULL) {
-      printf("Failed to run command\n" );
+      LogInfo("Failed to run command\n" );
       return DIGITALTWIN_COMMAND_ERROR;
     }
 
